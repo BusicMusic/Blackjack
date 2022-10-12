@@ -24,7 +24,7 @@ function startGame(){
     }
 
     function addImages(cnt){
-        pictureDeck[cnt]= ("Cards/"+ pictureDeck[cnt]+ ".png");
+        pictureDeck[cnt]= (pictureDeck[cnt]+ ".png");
         // console.log(pictureDeck[cnt]);
         return pictureDeck[cnt];
     }
@@ -79,7 +79,7 @@ function showCards(Area, Hand){
     if (Area == "dealer"){
         if (DrawnCards<5){
             X.innerHTML+=("<img class='"+ Area+ "Cards' src='"+ Hand[0]+ "'></img>");
-            X.innerHTML+=("<img class='"+ Area+ "Cards' src='Cards/Paint Splat Card Back.png'></img>");
+            X.innerHTML+=("<img class='"+ Area+ "Cards' src='Paint Splat Card Back.png'></img>");
         }
         else{
             for (var cnt= 0; cnt< Hand.length; cnt++){
@@ -121,7 +121,7 @@ function handValue(Hand, player){
     var CardValues= 0;
     var num=0;
     for (var cnt=0; cnt<Hand.length; cnt++){
-        var temp= Hand[cnt].substring(6, 8);
+        var temp= Hand[cnt].substring(0, 1);
         switch(temp){
                 case "A ":
                     num= 1;
