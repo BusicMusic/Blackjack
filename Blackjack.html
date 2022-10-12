@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Black Jack - Busic Music</title>
+        <link rel="icon" href="browserIcon.png"/>
+        <link href="blackjackStyle.css" type="text/css" rel="stylesheet"/>
+        <script src="blackjackScript.js" type="text/javascript" rel="javascript"></script>
+    </head>
+    <body>
+        <div id="header">
+            <span id="headerText">Black Light Black Jack</span>
+            <br/>
+            <span id="headerSubText">Created by BusicMusic</span>
+        </div>
+        <!-- <br/> -->
+        <!-- <br/> -->
+        <br/>
+        <div id="rules">
+            <p class="highlightText"><i style="font-size: 17pt">Rules</i>
+                <ul>
+                    <li>Get as close to 21 as possible without going over</li>
+                    <li>Aces are counted as 1</li>
+                    <li>All Face Cards are counted as 10</li>
+                    <li>You are dealt two cards at the start</li>
+                    <li>You can draw as many cards as you want</li>
+                    <li>If you go over 21 you lose</li>
+                    <li>The player who is the closest to 21 without going over wins</li>
+                    <!-- <li>Minimum bid is $2, Maximum bid is $500</li> -->
+                </ul>
+            </p>
+        </div>
+        <br/>
+        <div id="gameArea">
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modalText">
+                        example text
+                    </p>
+                </div>
+            </div>
+            <table>
+                <tr id="row1">
+                    <td class="col1">
+                        <div id="dealerInfo"><i class="highlightText">Dealer's Hand</i></div>
+                        <div id="dealerArea"></div>
+                    </td>
+                    <td class="col2" rowspan="2">
+                        <div id="cardDeck">
+                            <button type="button" class="buttons" id="startBtn" onclick="startGame()">Start a Game</button>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <img id="cardDeck" src="Cards/Stack of Painted Cards.png"></img>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <button type="button" class="buttons" id="drawBtn" disabled onclick="drawCard()">Draw a Card</button>
+                            <br/>
+                            <br/>
+                            <button type="button" class="buttons" id="drawBtn" onclick="stay()">Stay</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="row2">
+                    <td class="col1">
+                        <div id="playerInfo"><i class="highlightText">Your Hand</i></div>
+                        <div id="playerArea"></div>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <button type="button" class="buttons" id="homeBtn" onclick="">Back to Home Page</button>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </body>
+</html>
