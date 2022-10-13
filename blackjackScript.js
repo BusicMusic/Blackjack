@@ -121,7 +121,7 @@ function handValue(Hand, player){
     var CardValues= 0;
     var num=0;
     for (var cnt=0; cnt<Hand.length; cnt++){
-        var temp= Hand[cnt].substring(0, 1);
+        var temp= Hand[cnt].substring(0, 2);
         switch(temp){
                 case "A ":
                     num= 1;
