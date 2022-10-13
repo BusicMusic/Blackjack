@@ -24,7 +24,7 @@ function startGame(){
     }
 
     function addImages(cnt){
-        pictureDeck[cnt]= (pictureDeck[cnt]+ ".png");
+        pictureDeck[cnt]= (""+ pictureDeck[cnt]+ ".png");
         // console.log(pictureDeck[cnt]);
         return pictureDeck[cnt];
     }
@@ -118,10 +118,12 @@ function updateInfo(player){
     }
 }
 function handValue(Hand, player){
+    console.log(Hand);
     var CardValues= 0;
     var num=0;
     for (var cnt=0; cnt<Hand.length; cnt++){
         var temp= Hand[cnt].substring(0, 2);
+        console.log(temp);
         switch(temp){
                 case "A ":
                     num= 1;
